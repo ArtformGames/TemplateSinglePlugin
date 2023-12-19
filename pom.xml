@@ -10,7 +10,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
 
-        <project.package>${project.groupId}.plugin.template</project.package>
+        <project.package>${project.groupId}.plugin.TemplateSinglePlugin</project.package>
+        <deps.core.version>1.0.0</deps.core.version>
     </properties>
     <groupId>com.artformgames</groupId>
     <artifactId>TemplateSinglePlugin</artifactId>
@@ -18,9 +19,7 @@
 
     <name>TemplateSinglePlugin</name>
     <description>
-        An efficient and fair verification plugin for whitelisted servers,
-        which supports players to submit whitelist requests by themselves
-        and be reviewed by all players who have passed.
+
     </description>
     <url>https://github.com/ArtformGames/TemplateSinglePlugin</url>
 
@@ -101,7 +100,7 @@
         <dependency>
             <groupId>com.artformgames</groupId>
             <artifactId>artcore-api</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>${deps.core.version}</version>
             <scope>provided</scope>
         </dependency>
 
@@ -111,7 +110,6 @@
             <version>1.20.2-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
-
 
         <dependency>
             <groupId>me.clip</groupId>
@@ -211,7 +209,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <finalName>${project.name}-${project.parent.version}</finalName>
+                    <finalName>${project.name}-${project.version}</finalName>
                     <outputDirectory>${project.basedir}/.asset/</outputDirectory>
                     <createDependencyReducedPom>false</createDependencyReducedPom>
                     <relocations>
