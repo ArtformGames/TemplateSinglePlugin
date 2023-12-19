@@ -10,7 +10,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
 
-        <project.package>${project.groupId}.plugin.TemplateSinglePlugin</project.package>
+        <project.package>${project.groupId}.plugin.${project.groupId}</project.package>
         <deps.core.version>1.0.0</deps.core.version>
     </properties>
     <groupId>com.artformgames</groupId>
